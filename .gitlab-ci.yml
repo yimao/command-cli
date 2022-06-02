@@ -1,0 +1,14 @@
+variables:
+  MAVEN_CLI_OPTS: "--batch-mode --errors --fail-at-end --show-version"
+
+package-jdk11:
+  stage: package-check
+  tags:
+    - maven
+  image: maven:3.6.3-jdk-11
+  script:
+    - "mvn $MAVEN_CLI_OPTS clean package"
+  allow_failure: false
+
+stages:
+  - package-check

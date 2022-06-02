@@ -1,0 +1,4 @@
+spring.application.name: "command-cli"
+logging.file.name: logs/${spring.application.name}.log
+logging.level.root: info
+logging.level.com.ctlcode: debug
